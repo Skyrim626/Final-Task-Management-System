@@ -3,10 +3,6 @@
 
 <link rel="stylesheet" href="./css/taskgroup.css" />
 
-
-
-
-
   <div class="task-group">
     <div class="task-data">
       <div class="data names">
@@ -30,9 +26,9 @@
     <div class="task-buttons">
       <div class="buttons | d-flex">
         <div class="edit-button">
-          <a href="edit-page.html" title="Edit Page">
+          <button title="Edit Page" name="editTask" value="<?php echo $row['Task_ID']; ?>" type="submit" >
             <i class="fa-solid fa-pen-to-square"></i>
-          </a>
+          </button>
         </div>
         <button class="delete-button" name="deleteTask" value="<?php echo $row['Task_ID'] ?>" type="submit">
           <p title="Delete Page">

@@ -49,4 +49,13 @@ class TaskView extends Task {
 
     }  
 
+    // A function that gets the task by an ID
+    public function showTaskByID($id) {
+
+        $results = $this->getTask($id);
+
+        return $results->fetch_assoc();
+
+    }
+
 }

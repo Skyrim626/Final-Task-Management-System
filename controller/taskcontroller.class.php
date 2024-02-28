@@ -10,11 +10,7 @@ class TaskController extends Task{
     // A method that adds a new task
     public function insertNewTask($title, $description, $priority, $dueDate) {
 
-        $title = $title;
-
-        $result = $this->setTask($title, $description, $priority, $dueDate); // Pass the parameters
-
-        
+        $result = $this->setTask($title, $description, $priority, $dueDate); // Pass the parameters        
         return $result; // Returns the result
     }
 
@@ -24,6 +20,13 @@ class TaskController extends Task{
         $result = $this->deleteTask($id);
 
         return $result; // Returns the result
+
+    }
+
+    // A method that updates the task by ID
+    public function updateTaskByID($id, $title, $description, $priority, $dueDate) {
+
+        $result = $this->updateTask($id, $title, $description, $priority, $dueDate); return $result; // Returns the result
 
     }
 

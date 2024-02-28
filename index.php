@@ -18,6 +18,15 @@
       $result = $taskController->deleteTaskbyID($taskID); // Returned value true or false
      
     }
+
+    elseif(isset($_POST['editTask'])) {
+      
+      // Get the Task Assoc Array
+      $taskDetail = $_POST['editTask'];
+
+      header("Location:task.php?taskID=" . $taskDetail);
+      
+    }
     
 ?>
 

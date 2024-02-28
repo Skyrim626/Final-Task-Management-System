@@ -17,15 +17,23 @@ class Task extends DatabaseService{
         // Connects to the Database and Execute Query
         $query_result = mysqli_query($this->connectLocal(), $sql);
 
-        // Checks if the query result is not empty
-        /* if(!($query_result->num_rows > 0)) {
-
-          die("Empty Results");
-
-        } */
-
           // Returns the Result
           return $query_result;
+
+    }
+
+
+    // A function that gets the task data by an ID
+    protected function getTask($id) {
+
+        /// SQL Command
+        $sql = "SELECT * FROM task WHERE Task_ID='$id';";
+
+        // Connects to the Database and Execute Query
+        $query_result = mysqli_query($this->connectLocal(), $sql);
+
+        // Returns the Result
+        return $query_result;
 
     }
 
@@ -49,6 +57,35 @@ class Task extends DatabaseService{
            return $query_result;
         }
 
+    }
+
+    // A method that updates a task in the database
+    protected function updateTask($id, $title, $description, $priority, $dueDate) {
+
+        // SQL Command
+        $sql = "
+            UPDATE task
+            SET Title = '$title',
+            Description = '$description',
+            Priority = '$priority',
+            Due_date = '$dueDate'
+            WHERE Task_ID = '$id';
+        ";
+
+        // Connects to the Database and Execute Query
+        $query_result = mysqli_query($this->connectLocal(), $sql);
+
+        // Checks if the query is executed properly
+        if($query_result) {
+            // echo "Task Inserted Successfully <br>";
+           return $query_result;
+        }
+    
+        else {
+           // echo "Task Inserted Invalid <br>";
+           return $query_result;
+        }
+                
     }
 
     // A method that deletes a task in the database

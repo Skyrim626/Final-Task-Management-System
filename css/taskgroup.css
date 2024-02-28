@@ -95,11 +95,12 @@ button {
 .task-buttons .buttons .edit-button{
     width: 40px;
     font-size: 25px;
-
+   
 }
 
-.task-buttons .buttons .edit-button a{
+.task-buttons .buttons .edit-button button{
     color: rgb(34, 139, 60);
+    cursor: pointer;
 }
 
 .task-buttons .buttons .delete-button{
