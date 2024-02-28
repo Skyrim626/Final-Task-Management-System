@@ -190,6 +190,14 @@
     width: 25%;
 }
 
+.w-15 {
+    width: 15%;
+}
+
+.w-10 {
+    width: 10%;
+}
+
 /* Margins */
 
 .mt-1 {
@@ -215,4 +223,10 @@
 .mx-auto {
     margin-left: auto;
     margin-right: auto;
+}
+
+
+/* Display none */
+.d-none {
+    display: none;
 }

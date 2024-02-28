@@ -12,6 +12,7 @@
 
     // Processing the form submission
     if(isset($_POST['deleteTask'])) {
+
       // Get the Task_ID of the task being deleted
       $taskID = $_POST['deleteTask'];
       
@@ -59,75 +60,29 @@
       referrerpolicy="no-referrer"
     />
 
-
+    <!-- Scripts -->
+    <script src="js/events.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous" ></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous" ></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js" ></script>
 
-    <!-- Scripts -->
-    <script src="js/events.js" defer></script>
   </head>
   <body>
     <!-- Sidebar -->
-    <section class="sidebar">
-      <div class="top">
-        <div class="logo_name">
-          <a href="#" class="sidebar__logo-name | fw-500">Task Zen</a>
-        </div>
-      </div>
-      <div
-        class="menu-items | d-flex flex-column justify-content-space-between"
-      >
-        <ul class="nav-links |">
-          <li>
-            <a href="#home" class="d-flex">
-              <i class="fa-solid fa-house"></i>
-              <span class="link-name">Dashboard</span>
-            </a>
-          </li>
-          <li>
-            <a href="task_view.html" class="d-flex">
-              <i class="fa-solid fa-list-check"></i>
-              <span class="link-name">Tasks</span>
-            </a>
-          </li>
-          <li>
-            <a href="add_edit_task.html" class="d-flex">
-              <i class="fa-solid fa-pen-to-square"></i>
-              <span class="link-name">Add/Edit Task</span>
-            </a>
-          </li>
-        </ul>
-
-        <ul class="logout-mode">
-          <li>
-            <a href="#" class="d-flex">
-              <i class="fa-solid fa-right-from-bracket"></i>
-              <span class="link-name">Logout</span>
-            </a>
-          </li>
-          <li class="mode">
-            <a href="#" class="d-flex">
-              <i class="fa-solid fa-moon"></i>
-              <span class="link-name">Dark Mode</span>
-            </a>
-            <div class="mode-toggle">
-              <span class="switch"></span>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
+    <!-- Sidebar -->
+    <?php 
+        include_once("components/sidebar.component.php");
+    ?>
 
     <section class="dashboard">
       <div class="top">
         <i class="fa-solid fa-bars sidebar-toggle" sidebar-toggle></i>
 
-        <div class="search-box">
+        <!-- <div class="search-box">
           <i class="fa-solid fa-magnifying-glass"></i>
           <input type="text" placeholder="Search here..." />
-          <!-- <button class="btn">Search</button> -->
-        </div>
+          <button class="btn">Search</button>
+        </div> -->
       </div>
 
       <div class="dash-content">
@@ -210,6 +165,7 @@
 
             <?php 
             
+            // After deleting a task, displays a success modal
             if(isset($_POST['deleteTask'])) {
                  // Checks if the task is delete
                 if($result) {
@@ -224,7 +180,10 @@
                   </script>";
                 }
             }
+            
             ?>
+
+            
           
           
         </div>
