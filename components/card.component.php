@@ -15,9 +15,9 @@
         <h4 class="description-label card-text fw-400">Description: <span class="description fw-400" ><?php echo $row["Description"] ?></span> </h4>
         <h4 class="priority_level-label card-text fw-400">Priority Level: <span class="priority_level"><?php echo $row["Priority"] ?></span> </h4>
 
-        <div class="card__btn-group">
-            <button href="edit_task.html" class="btn btn-primary w-10" name="editTask" value="<?php echo $row['Task_ID'] ?>" type="submit">Edit</button> 
-            <button href="delete_task.html" class="btn btn-primary w-10" name="deleteTask" value="<?php echo $row['Task_ID'] ?>" type="submit">Delete</button>
+        <div class="card__btn-group ">
+            <button href="edit_task.html" class="btn btn-primary " name="editTask" value="<?php echo $row['Task_ID'] ?>" type="submit">Edit</button> 
+            <button href="delete_task.html" class="btn btn-primary " name="deleteTask" value="<?php echo $row['Task_ID'] ?>" type="submit">Delete</button>
         </div>
     </div>
 </div>
