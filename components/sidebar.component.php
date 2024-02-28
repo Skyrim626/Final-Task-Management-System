@@ -24,12 +24,12 @@
                         <span class="link-name">Tasks</span>
                     </a>
                 </li>
-                <li>
+                <!-- <li>
                     <a href="add-task.php" class="d-flex link-underline link-underline-opacity-0">
                         <i class="fa-solid fa-pen-to-square"></i>
                         <span class="link-name">Add/Edit Task</span>
                     </a>
-                </li>
+                </li> -->
                 
             </ul>
 
