@@ -94,7 +94,7 @@
 
           <div class="boxes">
             <div class="box">
-              <a href="task_view.html">
+              <a href="view-task.php">
                 <i class="fa-solid fa-list-check"></i>
                 <span class="text">Total Tasks</span>
                 <span class="number"
