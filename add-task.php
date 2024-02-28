@@ -51,11 +51,11 @@
         <form action="<?php $_SERVER["PHP_SELF"]; ?>" method="post">
             <div class="mb-3">
                 <label for="title" class="form-label">Title:</label>
-                <input type="text" class="form-control" id="title" name="title" placeholder="Enter Title">
+                <input type="text" class="form-control" id="title" name="title" placeholder="Enter Title" required>
             </div>
             <div class="mb-3">
                 <label for="description" class="form-label">Description:</label>
-                <textarea class="form-control" id="description" name="description" rows="3" placeholder="Enter description(optional)" required ></textarea>
+                <textarea class="form-control" id="description" name="description" rows="3" placeholder="Enter description(optional)"></textarea>
             </div>
             <div class="mb-3">
                 <label for="priority" class="form-label">Priority Level:</label>
