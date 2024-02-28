@@ -41,7 +41,7 @@ class Task extends DatabaseService{
     protected function setTask($title, $description, $priority, $dueDate) {
 
         // SQL Command
-        $sql = "INSERT INTO `task` (`Title`, `Description`, `Priority`, `Due_date`) VALUES ('$title', '$description', '$priority', '$dueDate');";
+        $sql = "INSERT INTO `task` (`Title`, `Description`, `Priority`, `Due_date`) VALUES ('$title', '$description', '$priority', '$dueDate');";   
 
         // Connects to the Database and Execute Query
         $query_result = mysqli_query($this->connectLocal(), $sql);
